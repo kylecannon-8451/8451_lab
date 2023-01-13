@@ -6,6 +6,9 @@ on:
       image_name: 
         required: True
         type: string
+      dockerfile_location:
+        required: False
+        type: string
   
 jobs:
 
