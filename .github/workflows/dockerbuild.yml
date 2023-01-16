@@ -6,7 +6,10 @@ on:
       image-name: 
         required: True
         type: string
-  
+        #artifactory link
+        #artifactory repo loc
+        #auth if needed
+        
 jobs:
 
   build:
@@ -17,4 +20,13 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build -t ${{ inputs.image-name }}:1.0 .
-    #how do i make the runner print to the console of setup a feed of what is happening
+    
+    #log print
+    #find image on runner 
+      #research file variables
+      #maybe find file path
+      
+      #jfrog cli with image art on runner to specified repo
+      
+    #log print
+    
