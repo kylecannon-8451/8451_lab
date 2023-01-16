@@ -3,11 +3,8 @@ name: Build Docker Image
 on:
   workflow_call:
     inputs:
-      image_name: 
+      image-name: 
         required: True
-        type: string
-      dockerfile_location:
-        required: False
         type: string
   
 jobs:
@@ -19,5 +16,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build -t ${{ image_name }}:1.0 .
+      run: docker build -t ${{ image-name }}:1.0 .
     #how do i make the runner print to the console of setup a feed of what is happening
