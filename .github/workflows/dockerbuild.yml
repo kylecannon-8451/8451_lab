@@ -22,8 +22,8 @@ jobs:
       - name: Build the Docker image
         run: docker build -t ${{ inputs.image-name }}:1.0 .
         #step 2
-      - name: doing something else
-        #step 3
+#       - name: doing something else
+#         #step 3
     
     #log print
     #find image on runner 
