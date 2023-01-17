@@ -14,12 +14,16 @@ jobs:
   #runner clean up 
   build:
 
-    runs-on: ubuntu-latest
-
+    runs-on: self-hosted
+    
     steps:
-    - uses: actions/checkout@v3
-    - name: Build the Docker image
-      run: docker build -t ${{ inputs.image-name }}:1.0 .
+      - uses: actions/checkout@v3
+        #step 1
+      - name: Build the Docker image
+        run: docker build -t ${{ inputs.image-name }}:1.0 .
+        #step 2
+      - name: doing something else
+        #step 3
     
     #log print
     #find image on runner 
